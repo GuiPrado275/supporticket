@@ -25,22 +25,23 @@ public class Ticket {
     private Long id;
 
     @ManyToOne //Many tasks for one user
-    @JoinColumn(name = "user_id", nullable = false, updatable = false) //this is for make reference of "user_id"
+    @JoinColumn(name = "userId", nullable = false, updatable = false) //this is for make reference of "user_id"
     private User user;
 
     @Column(name = "peopleInvolved", length = 100, nullable = false)
     @Size(min = 1, max = 100, message = "Por favor, informe a(s) pessoas envolvidas.")
     private String peopleInvolved;
 
-    @Column(name = "description", length = 255)
+    @Column(name = "description", length = 5000)
     @Size(min = 1, max = 5000, message = "A descrição deve ter entre 1 e 5000 caracteres.")
     @NotBlank(message = "A descrição não pode ficar em branco.")
     private String description;
 
-    @Column(name = "start_date",nullable = false)
+    @Column(name = "startDate",nullable = false)
     @NotNull(message = "Data de registro não pode ficar em branco.")
     private LocalDateTime registrationDate;
 
-    @Column(name = "is_finished", nullable = false)
+    @Column(name = "isFinished", nullable = false)
     private boolean isFinished;
 }
+//model, repository, projection (optional), service, controller, and test
