@@ -10,7 +10,7 @@ public interface TicketProjection {
 
     String getDescription();
 
-    String getPeopleInvolved();
+    String getPeopleAndSetorInvolved();
 
     boolean isFinished();
 

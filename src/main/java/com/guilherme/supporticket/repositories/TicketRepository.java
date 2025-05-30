@@ -17,7 +17,7 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
         t.id AS id,
         t.user.id AS userId,
         t.description AS description,
-        t.peopleInvolved AS peopleInvolved,
+        t.peopleAndSetorInvolved AS peopleAndSetorInvolved,
         t.isFinished AS isFinished,
         t.registrationDate AS registrationDate
     FROM Ticket t

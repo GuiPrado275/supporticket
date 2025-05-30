@@ -28,16 +28,16 @@ public class Ticket {
     @JoinColumn(name = "userId", nullable = false, updatable = false) //this is for make reference of "user_id"
     private User user;
 
-    @Column(name = "peopleInvolved", length = 100, nullable = false)
-    @Size(min = 1, max = 100, message = "Por favor, informe a(s) pessoas envolvidas.")
-    private String peopleInvolved;
+    @Column(name = "peopleAndSetorInvolved", length = 100, nullable = false)
+    @Size(min = 1, max = 100, message = "Por favor, informe a(s) pessoas e o setor envolvido.")
+    private String peopleAndSetorInvolved;
 
     @Column(name = "description", length = 5000)
     @Size(min = 1, max = 5000, message = "A descrição deve ter entre 1 e 5000 caracteres.")
     @NotBlank(message = "A descrição não pode ficar em branco.")
     private String description;
 
-    @Column(name = "startDate",nullable = false)
+    @Column(name = "registrationtDate",nullable = false)
     @NotNull(message = "Data de registro não pode ficar em branco.")
     private LocalDateTime registrationDate;
 
