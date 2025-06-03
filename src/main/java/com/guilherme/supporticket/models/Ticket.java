@@ -44,4 +44,3 @@ public class Ticket {
     @Column(name = "isFinished", nullable = false)
     private boolean isFinished;
 }
-//model, repository, projection (optional), service, controller, and test
