@@ -65,6 +65,8 @@ public class SecurityConfig {
 
         http.sessionManagement(session -> session //A sessão não pode salvar
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
+        return http.build();
     }
 
     @Bean
