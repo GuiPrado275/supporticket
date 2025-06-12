@@ -23,9 +23,9 @@ public class ErrorResponse {
     @Getter
     @Setter
     @RequiredArgsConstructor
-    public static class ValidationError {
-        private String field;
-        private String message;
+    public static class ValidationError{
+        private final String field;
+        private final String message;
     }
 
     public void addValidationError(String field, String message) {
@@ -35,7 +35,7 @@ public class ErrorResponse {
         this.errors.add(new ValidationError(field, message));
     }
 
-    public String toJson() {
+    public String toJson() { //mensagem do erro 402 (user digitou errado o email ou a senha)
         return "{\"status\": " + getStatus() + ", " +
                 "\"message\": \"" + getMessage() + "\"}";
     }
